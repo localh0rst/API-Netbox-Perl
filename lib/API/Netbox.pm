@@ -27,6 +27,11 @@ sub BUILD {
 
 }
 
+sub c {
+  my $self = shift;
+  return $self->client;
+}
+
 1;
 __END__
 
