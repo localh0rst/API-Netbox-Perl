@@ -5,7 +5,7 @@ use warnings;
 use OpenAPI::Client;
 use Moo;
 our $VERSION = "0.01";
-
+use Data::Dumper;
 has 'token'  => ( is => 'rw', required => 1 );
 has 'spec'   => ( is => 'rw', required => 1 );
 has 'url'    => ( is => 'rw', required => 1 );
@@ -25,12 +25,16 @@ sub BUILD {
     }
   );
 
+  $self->c->on(
+    after_build_tx => sub {
+      my ( $client, $tx ) = @_;
+      $tx->req->url->path->trailing_slash(1);
+    }
+  );
+
 }
 
-sub c {
-  my $self = shift;
-  return $self->client;
-}
+sub c { return shift->client; }
 
 1;
 __END__
