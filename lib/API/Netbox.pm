@@ -2,6 +2,7 @@ package API::Netbox;
 use 5.008001;
 use strict;
 use warnings;
+use OpenAPI::Client;
 use Moo;
 our $VERSION = "0.01";
 
