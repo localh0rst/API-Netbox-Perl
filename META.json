@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Wrapper for the Netbox API",
    "author" : [
       "localh0rst <git@fail.ninja>"
    ],
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Moo" : "0",
+            "OpenAPI::Client" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,6 +54,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/localh0rst/API-Netbox-Perl/issues"
+      },
+      "homepage" : "https://github.com/localh0rst/API-Netbox-Perl",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/localh0rst/API-Netbox-Perl.git",
+         "web" : "https://github.com/localh0rst/API-Netbox-Perl"
+      }
+   },
    "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 4.16",
    "x_static_install" : 1

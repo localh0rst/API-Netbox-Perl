@@ -1,15 +1,24 @@
-
+[![Actions Status](https://github.com/localh0rst/API-Netbox-Perl/actions/workflows/test.yml/badge.svg)](https://github.com/localh0rst/API-Netbox-Perl/actions)
 # NAME
 
-API::Netbox - It's new $module
+API::Netbox - Wrapper for the Netbox API
 
 # SYNOPSIS
 
     use API::Netbox;
+    my $nb = API::Netbox->new(
+      api_key => 'my_api_key',
+      spec    => 'path/to/netbox.json',
+      url     => 'https://netbox.example.com/api/schema',
+      # or
+      # url => 'file:///path/to/api.json';
+    );
 
 # DESCRIPTION
 
-API::Netbox is ...
+API::Netbox is a small wrapper for the Netbox API.
+Its using OpenAPI::Client to generate the API client.
+There is no fance stuff, just a simple wrapper.
 
 # LICENSE
 
