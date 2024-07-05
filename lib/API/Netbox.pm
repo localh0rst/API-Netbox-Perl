@@ -8,7 +8,7 @@ our $VERSION = "0.01";
 
 has 'token'  => ( is => 'rw', required => 1 );
 has 'spec'   => ( is => 'rw', required => 1 );
-has 'url'    => ( is => 'rw', required => 0 );
+has 'url'    => ( is => 'rw', required => 1 );
 has 'client' => ( is => 'rw', required => 0 );
 
 sub BUILD {
@@ -48,7 +48,6 @@ API::Netbox - Wrapper for the Netbox API
       api_key => 'my_api_key',
       spec    => 'file:///path/to/netbox.json',
       # spec    => 'http://netbox.example.com/api/schema/',
-      # URL is only required when using a different location than the default 
       url     => 'https://netbox.example.com/api/schema',
     );
 
